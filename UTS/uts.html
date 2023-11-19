@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dante & bocil</title>
+    <link rel="icon" href="img/love.png">
+    <link rel="stylesheet" href="uts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Concert+One&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Font End -->
+
+  </head>
+  <body onload="initClock()">
+   
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><span>dante 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg> bocil</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#dante">dante</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bocil">bocil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutus">about us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#memory">memory</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Home Start-->
+      <section id="home" class="home">
+        <h1>hello peeps^^</h1>
+        <p>welcome to my random web!! so here i'm gonna talk about my boyfriend, again(?). tapi kali ini ada bedanya 
+          karna.. disini aku bakal bahas tentang diriku juga, dan ada yang lebih menariknya nih! yaitu tentang yang aku dan 
+          pacarku jalani bareng-bareng. hope u enjoy and check this out!!!</p><br><br><br>
+        <!-- Clock & Date Start -->
+        <div class="datetime">
+          <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+          </div>
+          <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+          </div>
+        </div>
+        
+        <script type="text/javascript">
+          function updateClock(){
+            var now = new Date();
+            var dname = now.getDay(),
+            mo = now.getMonth(),
+            dnum = now.getDate(),
+            yr = now.getFullYear(),
+            hou = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds(),
+              pe = "AM";
+              
+              if(hou == 0){
+                hou = 12;
+              }
+              if(hou > 12){
+                hou = hou - 12;
+                pe = "PM";
+              }
+              
+              Number.prototype.pad = function(digits){
+                for(var n = this.toString(); n.length < digits; n = 0 + n);
+                return n;
+              }
+              
+              var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+              var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+              var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+              var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+              for(var i = 0; i < ids.length; i++)
+              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+          }
+          function initClock(){
+            updateClock();
+            window.setInterval("updateClock()", 1);
+          }
+          </script>
+          <!-- Clock & Date End -->
+          <br><p class="home-akhir"><span>"lah kok tiba-tiba letak jam disini??" "why?"</span> its bcs me and my boyfriend selalu telat disaat mau ketemu, 
+            antara dia yang telat atau aku yang telat (tapi aku jarang si hihi), jadi jam itu sangat berarti buat aku dan 
+            pacarku karena disaat sudah dekat dengan jam dimana kami akan berjumpa disitulah ke hectic an terjadi dan 
+            terkadang its so fun!</p>
+      </section>
+      <!-- Home End-->
+      
+      <!-- "dante" Start -->
+      <section id="dante" class="dante">
+        <h2>welcome to dante's section!!!</h2>
+        <h3>welcome back to my story about him :D</h3>
+        <p>again and again i'm gonna share to you (iyaa anda yang lagi baca) tentang pacarku. katanya pacarku atau dante 
+          atau as usual i call him 'biyan', <span class="a">dia sangat mencintaiku</span><span class="affh-iyh"> "affh iyh?"</span> 
+          aku yakin itu beneran sii hihi soalnya <span class="a">he's treat me so well and always want to improve his self for me</span>, 
+          thankyou<3.<br> salah satu ciri khas dari dirinya selain suaranya ada di <span class="a">RAMBUTNYA</span>, rambutnya itu rill 
+          brokoli wir. pkoknya rambut dia la yang paling brokoli, kriwil, kribo 1 ilkomp usu itu hahahhaha. and fyi guys rambut itu pernah 
+          dipuji koko cina dan dia bangga kalii.<br> dia itu <span class="a">one hand player ML</span> loh guyss (yes i'm very proud to him) 
+          and <span class="a">ofc gameplay nya ga kaleng-kaleng</span> dongg apalagi clintnya, wuhh mancap! dia bilang <span class="a">gapande jungler</span> 
+          tp make roger lgsg <span class="a">first blood sampe triple kill</span>. memang suka merendah untuk meninggi gitu anaknya yh.<br><br> tapi 
+          dibalik itu semua dan kegemasannya ada banyak juga hal yang aku kurang suka heuh. yang pertama dia itu orangnya <span class="a">boros</span> 
+          kalikalikalikali, tiap udah di tf uang bulanan pastii <span class="a">ada aja yg di checkout</span> dan itu ga pentingg. gatau lg deh gmn 
+          bilanginnya, bekurang aja udah sukur..<br>
+        </p>
+      </section>
+      <!-- "dante" End -->
+      
+      <!-- "bocil" Start -->
+        <section id="bocil" class="bocil">
+        <h2>and now, let's talk about me!</h2>
+        <h3>mutiara aprilia, biasa dipanggil "tiara",</h3>
+        <p><span>'06</span>, <span>udah kuliah semester 3</span>, that's why i basically called <span>'bocil'</span> from my college 
+          friends hehe. tapi aku suka si sama panggilan itu, karna aku jadi <span>ngerasa punya banyak abang dan kakak dikampus</span> "only 
+          kids can relate" <br><span>biyan</span> always call me "bocah" or "bocil" too, padahal dia <span>juga bocah</span> wuu (he's 05 line guys)
+          aku adalah orang yang <span>sangat sangat iseng tapi egois</span> juga, jadi kalo isengin biyan terus dibales akunya marah:D.
+          terus juga aku anaknya <span>SANGAT SANGAT MOODYAN</span>, kayak ga pms aja bisa naik turun secara drastis sampe biyan udah antara
+          <span>mengerti dan sabar atau pasrah</span> akan hal itu hehe. <br> klo untuk sisi positifnya saya sendiri juga tidak tau ya sobat-sobat 
+          (ada ga yaa sisi positifnya..) <br> <span>i really love sweet food guys</span>, specially ice cream and chocolate bar, <span>tiap hari</span> 
+          pasti ada paling engga sekali makan manis apapun itu jenisnya hehe <br> udah la segitu aja, gatau mau cerita apa lagie^^
+        </p>
+        </section>
+      <!-- "bocil" End -->
+
+      <!-- "about us" Start -->
+        <section id="aboutus" class="aboutus">
+          <h2><span>the last..</span> WELCOME TO THE STORY OF US..!!</h2>
+          <h3>24 april 2023, hari dimana kesepakatan menjadi lebih dari teman terlaksanakan</h3>
+          <p class="cerita">yupp kami masi <span>6 bulan</span> menuju 7 bulan, bentar ga sih? atau lama?? untuk kami, disaat menjalaninya kerasa 
+            cepet, tapi kalo uda ngitung <span class="b">"udah berapa lama si kita?"</span> langsung kerasa <span class="b">"wahh, ga terasa yaa"</span> <br><br>
+            <span>flashback to the last of 2022<<< </span><br>
+            dipenghujung tahun 2022, <span>biyan lagi ngedeketin cewe</span> dan cewe itu adalah <span>kawan sekelasku</span> dan bisa dibilang 
+            yaa cukup dekat karna disaat kami lagi melaksanakan kepanitiaan  dan aku dengan cewek itu 1 divisi. dan <span>aku juga lagi dekat sama 
+            cowo</span> dan cowo itu bisa dibilang <span>1 circle pertemanan sama biyan.</span> <br>
+            suatu hari tiba-tiba <span>biyan ngechat aku tips untuk ngedeketin cewe</span>, dan cewe yang ditujunya itu <span>masih temenku</span>, 
+            dan <span>akupun bercerita bahwa aku sedang dekat dengan temen cowonya</span>, jadi saling cerita lah :D. kami saling curhat apa yang 
+            terjadi diantara hubungan kami masing-masing <span class="b">(temen curhat -> pacaran is real!!)</span> <br>
+            setelah berlalu 3 bulan, kami <span>sama-sama nt dengan "orang" masing-masing</span>. dan biyan mulai sering <span>mengirim video-video 
+            reels</span> di ig, hampir setiap hari, sampai dimana aku menceritakan bahwa aku nt sama orang tersebut dan disitulah biyan langsung mulai 
+            <span>intens chat dari wa</span>. tapi disitu aku masih menganggapnya teman dekat aja, sampai di suatu hari yang dimana hari libur kuliah 
+            tapi aku lagi dikampus karna kerja kelompok and.. surprisingly <span>HE CAME TO THE CLASSROOM WHERE I AM!!</span> <br> 
+            ga stop disitu, tiba-tiba juga dia <span>ngajak nonton seminar</span>. sesampainya diruangan seminar aku duduk dikursi yang kiri kanannya 
+            udah terisi, and do you know what he do guys?? <span class="b">"agus(nama samaran), geser la aku mau dekat bocil"</span>  AND I HEARD IT 
+            CLEARLY GUYSS TT. anda after that.. <span>DIA NGANTER AKUU PULANGGG AKAHFJBDSF</span> padahal aku udah bilang klo sore kerumahku pasti macet, 
+            and he answered like "gapapa lo dimana mana juga macet kalo sore" dan juga rumah kami itu ujung ke ujung <span>so he has a super duper very 
+            bery big effort</span> guysss <br> dan selama kurang lebih sebulan pdkt berlanjut dengan segala kejutan and now already being a couple for 
+            6 months.. and we make a <span>bussiness</span>(?) di bidang <span>"content creator" w/ highlight "onehand gameplay"</span>, so don't forget 
+            to check it noww!!
+          </p>
+          <section class="card-yt">
+            <center>
+              <div class="row row-cols-md-1 row-cols-3 gx-5 p-5 mx-auto">
+                <div class="card gx-5 mx-auto" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">check this out!!</h5>
+                    <a href="https://www.tiktok.com/@danteonehandd" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                    </svg> TikTok</a>
+                  </div>
+                </div>
+                <div class="card gx-5 mx-auto" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">check this out!!</h5>
+                    <a href="https://www.youtube.com/@danteonehand" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                    </svg> YouTube</a>
+                  </div>
+                </div>
+                <div class="card gx-5 mx-auto" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">check this out!!</h5>
+                    <a href="https://www.instagram.com/danteonehandd/" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg> Instagram</a>
+                  </div>
+                </div>
+              </div>
+            </center>
+          </section>
+        </section>
+      <!-- "about us" End -->
+
+      <!-- "memory" Start -->
+        <section id="memory" class="memory">
+          <h2>dante&bocil.jpg</h2>
+          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <center>
+                  <img src="IMG/4-6-23.jpg" class="d-block w-100 mx-auto" alt="Foto 1">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 class="caption-title">6th April 2023</h5>
+                    <p class="caption-text">our 1st photo together^^</p>
+                  </div>
+                </center>
+              </div>
+              <div class="carousel-item">
+                <center>
+                  <img src="IMG/4-17-23.jpg" class="d-block w-100 mx-auto" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 class="caption-title">17th April 2023</h5>
+                    <p class="caption-text">bocil's sweet seventeen!!</p>
+                  </div>
+                </center>
+              </div>
+              <div class="carousel-item">
+                <center>
+                  <img src="IMG/10-11-23.jpg" class="d-block w-100 mx-auto" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 class="caption-title">18th October 2023</h5>
+                    <p class="caption-text">dante getting older<3 (kadonya ga diajak foto wuu)</p>
+                  </div>
+                </center>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+      <!-- "memory" End -->
+
+      <!-- Footer Start -->
+        <footer>
+          <div class="links">
+              <a href="#home">home</a>
+              <a href="#dante">dante</a>
+              <a href="#bocil">bocil</a>
+              <a href="#aboutus">about us</a>
+              <a href="#memory">memory</a>
+          </div>
+
+          <div>
+              <p>Created by <span>biyan's girlfriend</span> | &copy2023</p>
+          </div>
+        </footer>
+      <!-- Footer End -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+  </html>
